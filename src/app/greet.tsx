@@ -6,6 +6,7 @@ import { invoke } from '@tauri-apps/api/tauri'
 export default function Greet() {
   const [greeting, setGreeting] = useState('');
 
+  
   useEffect(() => {
     invoke<string>('greet', { name: 'Next.js' })
       .then(result => setGreeting(result))
